@@ -1,0 +1,23 @@
+code :
+
+num1 = int(input("Input first number : "))
+num2 = int(input("Input second number : "))
+
+print("addition : ",num2," + ",num1," = ",(num2+num1))
+print("subtraction : ",num2," - ",num1," = ",(num2-num1))
+print("division : ",num2," / ",num1," = ",(num2/num1))
+print("multiplication : ",num2," * ",num1," = ",(num2*num1))
+print("remainder : ",num2," % ",num1," = ",(num2%num1))
+
+
+output :
+
+Input first number : 2
+Input second number : 5
+addition :  5  +  2  =  7
+subtraction :  5  -  2  =  3
+division :  5  /  2  =  2.5
+multiplication :  5  *  2  =  10
+remainder :  5  %  2  =  1
+
+
