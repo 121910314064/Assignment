@@ -1,0 +1,38 @@
+CODE :
+
+##############################################################
+def match(x,n):
+    if x == n:
+        return True
+    else:
+        return False
+        
+limit = int(input("Enter size of array : "))
+arr = [0]*limit
+print("Enter the array ")
+for i in range(limit):
+    arr[i] = int(input())
+
+num = int(input("Enter the Element you want to find : "))
+
+for i in range(limit):
+    search = match(arr[i],num)
+    if(search == True):
+        print("Element ", num , " Found at ", i+1)
+        break
+############################################################
+
+
+output :
+
+############################################################
+Enter size of array : 5
+Enter the array 
+2
+4
+7
+9
+5
+Enter the Element you want to find : 9
+Element  9  Found at  4
+###########################################################
