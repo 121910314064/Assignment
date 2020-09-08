@@ -1,0 +1,65 @@
+code :
+
+######################################################################################################################################
+from array import *
+n=int(input("Enter the your choice : 1. Copy, 2. Remove duplicates, 3. Delete at kth index, 4. Search an item, 5. Display contents "))
+arr1=array('i',[1,2,3,4,4,4])
+# Copying all elements of one array into another
+if (n==1):
+    arr2 = [None] * len(arr1)
+    for i in range(0, len(arr1)):
+        arr2[i] = arr1[i]
+    print("Elements of original array : ")
+    for i in range(0, len(arr1)):
+        print(arr1[i]),
+    print()
+    print("Elements of new array : ")
+    for i in range(0, len(arr2)):
+        print(arr2[i]),
+
+#removing duplicates
+elif n==2:
+    print("The original list is : " + str(arr1))
+    res = []
+    for i in arr1:
+        if i not in res:
+            res.append(i)
+
+        # printing list after removal
+    print("The list after removing duplicates : " + str(res))
+    
+#program to remove the index element
+elif n==3:
+    k=int(input("Enter the index of the number to delete : "))
+    del arr1[k]
+    print(*arr1)
+    
+#for searching the element in the array
+elif n==4:
+    n=int(input("Enter the element to search : "))
+    k = 0
+    for e in arr1:
+        if e == n:
+            print("Index of the value u searched for")
+            print(k)
+            break
+        k += 1
+    else:
+        print("Enter correct element")
+        
+#Displaying the content of the program
+elif n==5:
+    print("This is the program to do : ")
+    print(("1)COPY 2) REMOVE DUPLICATES 3)DELETE AT Kth INDEX 4) SEARCH FOR THE ITEM 5)DISPLAY CONTENT"))
+else:
+    print("Enter the value from the choices given : ")
+    
+#################################################################################################################
+
+output:
+
+##################################################################################################################
+Enter the your choice : 1. Copy, 2. Remove duplicates, 3. Delete at kth index, 4. Search an item, 5. Display contents 3
+Enter the index of the number to delete : 4
+1 2 3 4 4
+##################################################################################################################
