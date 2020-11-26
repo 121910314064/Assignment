@@ -1,0 +1,94 @@
+code :
+########################################################################################
+class Node: 
+
+	def __init__(self): 
+		self.data = None
+		self.next = None
+
+head = None
+
+
+def largestElement(head): 
+
+	
+	max = -12345
+
+	 
+	while (head != None): 
+	
+		 
+		if (max < head.data) : #main logic  for maximum
+			max = head.data 
+		head = head.next
+	
+	return max
+
+#	Identify the biggest and smallest key in a linked list containing integers.
+
+
+def smallestElement(head): 
+
+	 
+	min = 12345
+	 
+	while (head != None) : #main logic  for minimum
+	
+		
+		if (min > head.data) :   
+			min = head.data 
+		head = head.next
+	
+	return min
+
+def push( data) : 
+
+	global head 
+
+	
+	newNode = Node() 
+
+	
+	newNode.data = data 
+
+	 
+	newNode.next = (head) 
+
+	
+	(head) = newNode 
+
+ 
+def printList( head) : 
+
+	while (head != None) : 
+		print(head.data ), 
+		head = head.next
+	
+	
+
+
+#driver code 
+push( 19) 
+push( 21) 
+print("Linked list is : ") 
+
+
+printList(head) 
+print("Maximum element in linked list: ", end= "") 
+
+
+print(largestElement(head)) 
+print("Minimum element in linked list: ", end ="") 
+
+
+print(smallestElement(head), end= "")
+################################################################################################################
+
+OUTPUT:
+################################################################################################################
+Linked list is : 
+21
+19
+Maximum element in linked list: 21
+Minimum element in linked list: 19
+###############################################################################################################
