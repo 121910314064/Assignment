@@ -1,0 +1,100 @@
+
+class Node: 
+    def __init__(self,key): 
+        self.left = None
+        self.right = None
+        self.val = key 
+  
+  
+
+def Inorder(root): 
+  
+    if root: 
+  
+       
+        Inorder(root.left) 
+  
+        
+        print(root.val), 
+  
+        
+        Inorder(root.right) 
+  
+  
+  
+
+def Postorder(root): 
+  
+    if root: 
+  
+        
+        Postorder(root.left) 
+  
+        
+        Postorder(root.right) 
+  
+        
+        print(root.val), 
+  
+  
+
+def Preorder(root): 
+  
+    if root: 
+  
+        
+        print(root.val), 
+  
+        
+        Preorder(root.left) 
+  
+        
+        Preorder(root.right) 
+  
+  
+N =int(input("enter the number21:"))
+root = Node(N)
+Ne = int(input("enter the number19"))
+root.left      = Node(Ne)
+Neh = int(input("enter the number87:"))
+root.right     = Node(Neh)
+Neh21 =int(input("enter the number21:"))
+
+root.left.left  = Node(Neh21)
+neh211987 = int(input("enter the number 211987:"))
+root.left.right  = Node(neh211987) 
+print ("Preorder traversal of binary tree is")
+Preorder(root) 
+  
+print ("\nInorder traversal of binary tree is")
+Inorder(root) 
+  
+print ("\nPostorder traversal of binary tree is")
+Postorder(root) 
+OUTPUT:
+enter the number21:21
+enter the number19 19
+enter the number87:87
+enter the number21:21
+enter the number 211987:1987
+Preorder traversal of binary tree is
+21
+19
+21
+1987
+87
+
+Inorder traversal of binary tree is
+21
+19
+1987
+21
+87
+
+Postorder traversal of binary tree is
+21
+1987
+19
+87
+21
+>>> 
